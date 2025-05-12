@@ -2,21 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta
-      http-equiv="X-UA-Compatible"
-      content="ie=edge"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Moyo header</title>
+
+    <!-- Fonte Roboto 500 Roman -->
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
-      href="./style.css"
     />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Moyo header</h1>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="images/logo.png" alt="Logo MOYO" />
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="#" class="highlight is-active">APPLE</a></li>
+            <li><a href="#">Samsung</a></li>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#" data-qa="hover">Laptops & Computers</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Photo</a></li>
+            <li><a href="#">Video</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   </body>
 </html>
