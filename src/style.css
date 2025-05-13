@@ -1,37 +1,42 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 body {
   /* stylelint-disable-next-line font-family-name-quotes */
   font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
 
-.header {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+
+header {
   width: 100%;
+  background: white;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
   text-transform: uppercase;
+  display: flex;
   align-items: center;
-  width: 100%;
-  padding: 0 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+
+.logo img {
+  height: 40px;
+}
+
 
 .nav {
   height: 60px;
   display: flex;
   align-items: center;
-}
-
-.logo img {
-  height: 40px;
 }
 
 .nav__list {
@@ -40,40 +45,39 @@ body {
 }
 
 .nav__list li + li {
-  margin-left: 30px; /* Substitui o flex gap */
+  margin-left: 30px;
 }
 
 .nav__list a {
   text-decoration: none;
-  color: #000;
-  font-weight: 500;
-  display: block;
+  color: black;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
-.nav__list a.highlight {
+
+.nav__list a:hover {
   color: #00acdc;
-  font-weight: bold;
 }
+
 
 .nav__list a.is-active {
-  position: relative;
   color: #00acdc;
 }
 
 .nav__list a.is-active::after {
-  content: '';
+  content: "";
   position: absolute;
+  bottom: 0;
   left: 0;
-  bottom: -8px;
-  width: 100%;
+  top: 56px;
   height: 4px;
+  width: 100%;
   background-color: #00acdc;
   border-radius: 8px;
-}
-
-.nav__list a:hover {
-  color: #007a99;
 }
 
 @media (max-width: 1024px) {
@@ -82,10 +86,31 @@ body {
   }
 
   .logo img {
-    width: 100px;
+    width: 40px; /* reduzido no mobile */
+  }
+
+  .nav__list {
+    display: flex;
+    font-size: 11px;
   }
 
   .nav__list li + li {
-    margin-left: 20px;
+    margin-left: 20px; /* substitui gap */
+  }
+
+  .nav__list li:first-child {
+    margin-left: 0;
+  }
+
+  .nav__list li:last-child {
+    margin-right: 0;
+  }
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .nav__list a.is-active::after {
+    top: 42px; /* reposiciona a linha azul no mobile */
   }
 }
