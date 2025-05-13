@@ -76,8 +76,7 @@ header {
 }
 
 .nav__list a.item-blue {
-color: #00acdc;
-
+  color: #00acdc;
 }
 
 @media (max-width: 1024px) {
@@ -97,7 +96,7 @@ color: #00acdc;
   .nav__list li + li {
     margin-left: 20px;
   }
-.header {
+  .header {
     padding: 15px 20px;
   }
 
