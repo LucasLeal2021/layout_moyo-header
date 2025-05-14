@@ -14,6 +14,7 @@ body {
 header {
   width: 100%;
   background: white;
+  padding: 10px 0;
 }
 
 .container {
@@ -23,17 +24,21 @@ header {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .logo img {
   height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .nav {
-  height: 60px;
+  height: auto;
   display: flex;
   align-items: center;
-}
+  padding: 22.5px 0;}
 
 .nav__list {
   list-style: none;
@@ -41,19 +46,25 @@ header {
 }
 
 .nav__list li + li {
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+.nav__list li:last-child {
+  margin-right: 50px;
 }
 
 .nav__list a {
   text-decoration: none;
   color: black;
-  height: 60px;
   position: relative;
   text-align: center;
   transition: color 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.nav__list a:hover {
+.nav__list a[data-qa='hover']:hover {
   color: #00acdc;
 }
 
@@ -86,19 +97,23 @@ header {
     width: 40px;
   }
 
+  .nav {
+    padding: 22.5px 0;
+  }
+
   .nav__list {
-    display: flex;
     font-size: 11px;
   }
 
   .nav__list li + li {
     margin-left: 20px;
   }
-  .header {
-    padding: 15px 20px;
+
+  .nav__list li:last-child {
+    margin-right: 50px;
   }
 
   .nav__list a.is-active::after {
-    top: 42px;
+    top: 30px;
   }
 }
