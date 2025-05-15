@@ -1,3 +1,4 @@
+/* stylelint-disable font-family-name-quotes */
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +6,6 @@
 }
 
 body {
-  /* stylelint-disable-next-line font-family-name-quotes */
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -14,7 +14,7 @@ body {
 header {
   width: 100%;
   background: white;
-  padding: 10px 0;
+  padding: 0 10px;
 }
 
 .container {
@@ -38,7 +38,8 @@ header {
   height: auto;
   display: flex;
   align-items: center;
-  padding: 22.5px 0;}
+  padding: 22.5px 0;
+}
 
 .nav__list {
   list-style: none;
@@ -47,10 +48,6 @@ header {
 
 .nav__list li + li {
   margin-left: 20px;
-}
-
-.nav__list li:last-child {
-  margin-right: 50px;
 }
 
 .nav__list a {
@@ -102,15 +99,7 @@ header {
   }
 
   .nav__list {
-    font-size: 11px;
-  }
-
-  .nav__list li + li {
-    margin-left: 20px;
-  }
-
-  .nav__list li:last-child {
-    margin-right: 50px;
+    font-size: 12px;
   }
 
   .nav__list a.is-active::after {
